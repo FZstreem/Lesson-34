@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="topnav">
+        <a class="active" href="#home">HOME</a>
+        <a href="#">About_Us</a>
+        <a href="#">Gallery</a>
+        <a href="#">Contact_US</a>
+    </div>
+    <section>
+        <img class="mySlides" src="https://cdn.pixabay.com/photo/2024/05/26/10/15/bird-8788491_1280.jpg" style="height: 500px;">
+        <img class="mySlides" src="https://images.pexels.com/photos/674010/pexels-photo-674010.jpeg?cs=srgb&dl=pexels-anjana-c-169994-674010.jpg&fm=jpg" style="height: 500px;">
+    </section>
+    <script>
+        var myIndex = 0;
+        carousel();
+        function carousel() {
+            var i;
+            var x = document.getElementByClassName("mySlides")
+            for (i = 0; i < x.length; i++){
+                x[i].style.display = "none";
+            }
+            myIndex++;
+            if (myIndex > x.length) {myIndex = 1}
+            x [myIndex-1].style.display="block";
+            setTimeout(carousel, 3000);
+        }
+
+    </script>
+</body>
+</html>
